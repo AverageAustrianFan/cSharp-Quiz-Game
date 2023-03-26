@@ -1,0 +1,59 @@
+// This is a quiz that I've made in C#. Feel free to change the questions and answers. Have fun and thank you for reading!
+
+using System;
+
+namespace Quiz
+{
+  class Program
+  {
+    
+    static void Main(string[] args)
+    {
+
+        string[] answer = { "Alaska", "Paris", "Walter White"};
+
+        string answer1;
+        string answer2;
+        string answer3;
+        int point = 0;
+
+        Console.Write("What is the biggest US State?:");
+        answer1 = Console.Readline();
+        if (answer1 == answer[0])
+        {
+            point +=1;
+            Console.WriteLine("Correct!");
+        }
+        else
+        {
+            point -=1;
+            Console.WriteLine("Incorrect!");
+        }
+        Console.Write("What is the capital of France?:");
+        answer2 = Console.Readline();
+        if (answer2 == answer[1])
+        {
+            point +=1;
+            Console.WriteLine("Correct!");
+        }
+        else
+        {
+            point -=1;
+            Console.WriteLine("Incorrect!");
+        }
+        Console.Write("What is the main character in Breaking Bad?:");
+        answer3 = Console.Readline();
+        if (answer3 == answer[1])
+        {
+            point +=1;
+            Console.WriteLine("Correct!");
+        }
+        else
+        {
+            point -=1;
+            Console.WriteLine("Incorrect!");
+        }
+        Console.WriteLine("The Final Result is..." +point)
+    }
+  }
+}
