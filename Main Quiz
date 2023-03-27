@@ -10,15 +10,17 @@ namespace Quiz
     static void Main(string[] args)
     {
 
-        string[] answer = { "Alaska", "Paris", "Walter White"};
+        string[] answer = { "Alaska", "Vienna", "Walter White", "Pacific", "Sweden" };
 
         string answer1;
         string answer2;
         string answer3;
+        string answer4;
+        string answer5;
         int point = 0;
 
-        Console.Write("What is the biggest US State?:");
-        answer1 = Console.Readline();
+        Console.Write("What is the biggest U.S. State?:");
+        answer1 = Console.ReadLine();
         if (answer1 == answer[0])
         {
             point +=1;
@@ -29,8 +31,8 @@ namespace Quiz
             point -=1;
             Console.WriteLine("Incorrect!");
         }
-        Console.Write("What is the capital of France?:");
-        answer2 = Console.Readline();
+        Console.Write("What is the capital of Austria?:");
+        answer2 = Console.ReadLine();
         if (answer2 == answer[1])
         {
             point +=1;
@@ -42,8 +44,8 @@ namespace Quiz
             Console.WriteLine("Incorrect!");
         }
         Console.Write("What is the main character in Breaking Bad?:");
-        answer3 = Console.Readline();
-        if (answer3 == answer[1])
+        answer3 = Console.ReadLine();
+        if (answer3 == answer[2])
         {
             point +=1;
             Console.WriteLine("Correct!");
@@ -53,7 +55,31 @@ namespace Quiz
             point -=1;
             Console.WriteLine("Incorrect!");
         }
-        Console.WriteLine("The Final Result is..." +point)
+        Console.Write("What is the biggest ocean on Earth?:");
+        answer4 = Console.ReadLine();
+        if (answer4 == answer[3])
+        {
+            point +=1;
+            Console.WriteLine("Correct!");
+        }
+        else
+        {
+            point -=1;
+            Console.WriteLine("Incorrect!");
+        }
+        Console.Write("Which country has the most lakes?:");
+        answer5 = Console.ReadLine();
+        if (answer5 == answer[4])
+        {
+            point +=1;
+            Console.WriteLine("Correct!");
+        }
+        else
+        {
+            point -=1;
+            Console.WriteLine("Incorrect!");
+        }
+        Console.WriteLine("You finished the quiz! Your final result is..." +point);
     }
   }
 }
