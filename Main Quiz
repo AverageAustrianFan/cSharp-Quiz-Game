@@ -1,5 +1,3 @@
-// This is a quiz that I've made in C#. Feel free to change the questions and answers. Have fun and thank you for reading!
-
 using System;
 
 namespace Quiz
@@ -67,7 +65,7 @@ namespace Quiz
             point -=1;
             Console.WriteLine("Incorrect!");
         }
-        Console.Write("Which country has the most lakes?:");
+        Console.Write("Which country has the most islands?:");
         answer5 = Console.ReadLine();
         if (answer5 == answer[4])
         {
