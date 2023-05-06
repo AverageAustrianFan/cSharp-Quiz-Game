@@ -1,0 +1,47 @@
+// Set up an array of questions, each with a question and an answer
+const questions = [
+    {
+      question: "What is the biggest U.S. State?",
+      answer: "Alaska"
+    },
+    {
+      question: "What is the capital of Austria?",
+      answer: "Vienna"
+    },
+    {
+      question: "Who is the main character in Breaking Bad?",
+      answer: "Walter White"
+    },
+    {
+      question: "What is the biggest ocean on Earth?",
+      answer: "Pacific"
+    },
+    {
+      question: "Which country has the most islands?",
+      answer: "Sweden"
+    }
+  ];
+  
+  // Keep track of the user's score
+  let score = 0;
+  
+  // Loop through each question and ask it
+  for (let i = 0; i < questions.length; i++) {
+    // Get the current question
+    const question = questions[i].question;
+    // Ask the question and get the user's answer
+    const userAnswer = prompt(question);
+    // Get the correct answer
+    const correctAnswer = questions[i].answer;
+    // Check if the user's answer is correct and update the score
+    if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+      console.log("Correct!");
+      score++;
+    } else {
+      console.log(`Incorrect. The correct answer is ${correctAnswer}.`);
+    }
+  }
+  
+  // Print the final score
+  console.log(`Your final score is: ${score}/${questions.length}`);
+  
